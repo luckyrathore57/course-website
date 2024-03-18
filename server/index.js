@@ -6,6 +6,7 @@ const app = express();
 const cors=require("cors");
 const adminRouter=require("./routes/admin");
 const userRouter=require("./routes/user");
+const {monogURL}=require("./secret");
 
 app.use(express.json());
 app.use(cors());
@@ -22,6 +23,6 @@ app.get("/*", (req, res) => {
 
 
 
-mongoose.connect('mongodb+srv://luckyrathore57code:0OJwZNyhcP08vJ7c@cluster0.d4utrqy.mongodb.net/courses', { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
+mongoose.connect(monogURL, { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
 
 app.listen(3000, () => console.log('Server running on port 3000'));

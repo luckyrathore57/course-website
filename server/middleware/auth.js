@@ -1,4 +1,4 @@
-const secretKey="rathorejj";
+const {secretKey}=require("../secret");
 
 const jwt=require('jsonwebtoken');
 
