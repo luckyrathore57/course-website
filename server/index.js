@@ -22,6 +22,6 @@ app.get("/*", (req, res) => {
 
 
 
-mongoose.connect('mongodb+srv://lucky9584826096:Hy4S7sQYyfsZUnT1@cluster0.d4utrqy.mongodb.net/courses', { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
+mongoose.connect('mongodb+srv://luckyrathore57code:0OJwZNyhcP08vJ7c@cluster0.d4utrqy.mongodb.net/courses', { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
 
-app.listen(3009, () => console.log('Server running on port 3009'));
+app.listen(3000, () => console.log('Server running on port 3000'));

@@ -9,13 +9,14 @@ const {secretKey,authenticateJwt}= require("../middleware/auth");
 
 router.post('/signup', async (req, res) => {
     // logic to sign up user
-    const {email, password}=req.body;
+    console.log("enter");
+    const {firstName,lastName,email, password}=req.body;
     const user= await User.findOne({email});
     if(user){
       res.status(403).send({message:"user already exist"})
     }
     else{
-      const newUser=new User({email, password});
+      const newUser=new User({firstName,lastName,email, password});
       const token=jwt.sign({email,role:"user"},secretKey,{expiresIn:"1h"});
       await newUser.save();
       res.send({message:"user sign up sucessfully",token});

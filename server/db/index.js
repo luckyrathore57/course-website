@@ -2,6 +2,8 @@ const mongoose=require('mongoose');
 
 //mongoose schema
 const userSchema=new mongoose.Schema({
+  firstName:String,
+  lastName:String,
   email:String,
   password:String,
   purchasedCourses:[{type:mongoose.Schema.Types.ObjectId,ref:'Course'}]
